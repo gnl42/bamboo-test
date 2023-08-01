@@ -9934,6 +9934,18 @@
             "type" : "boolean",
             "writeOnly" : true
           },
+          "notRunYet" : {
+            "type" : "boolean",
+            "writeOnly" : true
+          },
+          "finished" : {
+            "type" : "boolean",
+            "writeOnly" : true
+          },
+          "successful" : {
+            "type" : "boolean",
+            "writeOnly" : true
+          },
           "buildReason" : {
             "type" : "string",
             "writeOnly" : true

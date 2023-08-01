@@ -74,9 +74,6 @@
 					<generateModelDocumentation>false</generateModelDocumentation>
 					<generateApiDocumentation>false</generateApiDocumentation>
 					<addCompileSourceRoot>true</addCompileSourceRoot>
-					<additionalProperties>
-						<additionalProperty>supportUrlQuery=false</additionalProperty>
-					</additionalProperties>
 				</configuration>
 				<executions>
 					<execution>

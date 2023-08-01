@@ -201,7 +201,8 @@ public class BambooTester9 {
 	public void getPlan() throws InterruptedException, ExecutionException, ApiException {
 		final BuildApi build = new BuildApi(apiClient);
 
-		final RestPlan plans = build.getPlan(PROJECT_KEY, PLAN_KEY_MASTER, "actions,stages,branches,variableContext")
+		String expand = "actions,stages.stage.plans[0].plan.stages.stage,branches,variableContext";
+		final RestPlan plans = build.getPlan(PROJECT_KEY, PLAN_KEY_MASTER, expand)
 				.get();
 		System.out.println(plans);
 	}
@@ -698,7 +699,7 @@ public class BambooTester9 {
 
 	@Test
 	public void getLatestBuildResultsForProject() throws InterruptedException, ExecutionException, ApiException {
-		String expand = String.join(",", "results.result.stages.stage");
+		String expand = String.join(",", "results.result.logfiles");
 		RestResultsResults res = def.getLatestBuildResultsForProject(PROJECT_KEY, null, null, expand, null, null, null,
 				null, null, null, null).get();
 
@@ -746,7 +747,7 @@ public class BambooTester9 {
 	public void getBuild() throws InterruptedException, ExecutionException, ApiException {
 		String expand = String.join(",", "changes", "metadata", "plan", "master", "vcsRevisions", "artifacts",
 				"comments", "labels", "jiraIssues", "variables", "stages");
-		final Result res = def.getBuild(PROJECT_KEY, PLAN_KEY_MASTER, "2", expand, null).get();
+		final Result res = def.getBuild(PROJECT_KEY, PLAN_KEY_MASTER, "37", expand, null).get();
 		System.out.println(res);
 	}
 
@@ -759,7 +760,7 @@ public class BambooTester9 {
 
 	@Test
 	public void getBuildHistory() throws InterruptedException, ExecutionException, ApiException {
-		String expand = "results.result";
+		String expand = "results[0].result.variables";
 		final RestResultsResults res = def.getBuildHistory(PROJECT_KEY, PLAN_KEY_BRANCH, null, null, expand, null, null,
 				null, null, null, null, null).get();
 		System.out.println(res);

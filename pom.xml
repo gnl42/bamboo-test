@@ -40,13 +40,12 @@
             <plugin>
                 <groupId>org.openapitools</groupId>
                 <artifactId>openapi-generator-maven-plugin</artifactId>
-                <version>7.0.0-SNAPSHOT</version>
+                <version>7.0.0-beta</version>
                 <configuration>
                     <generatorName>java</generatorName>
                     <logToStderr>false</logToStderr>
                     <verbose>false</verbose>
                     <output>${project.build.directory}</output>
-                    <sourceFolder>src/java/main</sourceFolder>
                     <configOptions>
                         <annotationLibrary>swagger2</annotationLibrary>
                         <generateApiDocumentation>false</generateApiDocumentation>
