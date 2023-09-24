@@ -20705,11 +20705,6 @@
                 "requestBody": {
                     "description": "repository id",
                     "content": {
-                        "application/xml": {
-                            "schema": {
-                                "$ref": "#/components/schemas/RestIdContainer"
-                            }
-                        },
                         "application/json": {
                             "schema": {
                                 "$ref": "#/components/schemas/RestIdContainer"
@@ -20880,11 +20875,6 @@
                 "requestBody": {
                     "description": "Enable request",
                     "content": {
-                        "application/xml": {
-                            "schema": {
-                                "$ref": "#/components/schemas/RestEnableContainer"
-                            }
-                        },
                         "application/json": {
                             "schema": {
                                 "$ref": "#/components/schemas/RestEnableContainer"
@@ -21065,11 +21055,6 @@
                 "requestBody": {
                     "description": "Project",
                     "content": {
-                        "application/xml": {
-                            "schema": {
-                                "$ref": "#/components/schemas/RestProject"
-                            }
-                        },
                         "application/json": {
                             "schema": {
                                 "$ref": "#/components/schemas/RestProject"
@@ -21128,14 +21113,6 @@
                     "200": {
                         "description": "List of variables for the given project",
                         "content": {
-                            "application/xml": {
-                                "schema": {
-                                    "type": "array",
-                                    "items": {
-                                        "$ref": "#/components/schemas/RestVariable"
-                                    }
-                                }
-                            },
                             "application/json": {
                                 "schema": {
                                     "type": "array",
@@ -21306,11 +21283,6 @@
                 "requestBody": {
                     "description": "Project variable",
                     "content": {
-                        "application/xml": {
-                            "schema": {
-                                "$ref": "#/components/schemas/RestVariable"
-                            }
-                        },
                         "application/json": {
                             "schema": {
                                 "$ref": "#/components/schemas/RestVariable"
@@ -24160,11 +24132,6 @@
                 "requestBody": {
                     "description": "Plan variable",
                     "content": {
-                        "application/xml": {
-                            "schema": {
-                                "$ref": "#/components/schemas/RestVariable"
-                            }
-                        },
                         "application/json": {
                             "schema": {
                                 "$ref": "#/components/schemas/RestVariable"
@@ -24311,11 +24278,6 @@
                 "requestBody": {
                     "description": "Variable to be updated",
                     "content": {
-                        "application/xml": {
-                            "schema": {
-                                "$ref": "#/components/schemas/RestVariable"
-                            }
-                        },
                         "application/json": {
                             "schema": {
                                 "$ref": "#/components/schemas/RestVariable"
@@ -24529,11 +24491,6 @@
                 "requestBody": {
                     "description": "Quarantine settings",
                     "content": {
-                        "application/xml": {
-                            "schema": {
-                                "$ref": "#/components/schemas/RestQuarantineExpiry"
-                            }
-                        },
                         "application/json": {
                             "schema": {
                                 "$ref": "#/components/schemas/RestQuarantineExpiry"
@@ -25205,11 +25162,6 @@
                 "requestBody": {
                     "description": "label content to add to build result",
                     "content": {
-                        "application/xml": {
-                            "schema": {
-                                "$ref": "#/components/schemas/RestPlanLabel"
-                            }
-                        },
                         "application/json": {
                             "schema": {
                                 "$ref": "#/components/schemas/RestPlanLabel"
@@ -28534,11 +28486,6 @@
                 "requestBody": {
                     "description": "Build result comment",
                     "content": {
-                        "application/xml": {
-                            "schema": {
-                                "$ref": "#/components/schemas/CreateCommentRequest"
-                            }
-                        },
                         "application/json": {
                             "schema": {
                                 "$ref": "#/components/schemas/CreateCommentRequest"
@@ -28726,11 +28673,6 @@
                 "requestBody": {
                     "description": "Build result label",
                     "content": {
-                        "application/xml": {
-                            "schema": {
-                                "$ref": "#/components/schemas/RestBuildLabel"
-                            }
-                        },
                         "application/json": {
                             "schema": {
                                 "$ref": "#/components/schemas/RestBuildLabel"
@@ -30536,16 +30478,6 @@
                 ],
                 "requestBody": {
                     "content": {
-                        "application/xml": {
-                            "schema": {
-                                "type": "object",
-                                "properties": {
-                                    "fakeParam": {
-                                        "type": "string"
-                                    }
-                                }
-                            }
-                        },
                         "application/json": {
                             "schema": {
                                 "type": "object",
